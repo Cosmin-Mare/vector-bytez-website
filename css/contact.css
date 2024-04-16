@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Blackoron';
+    src: url('/misc/blackoron/Fonts/blaca___.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+    --light-sakura: #f397bf;
+    --dark-sakura: #9c3245;
+    --black: #000;
+    --white: #fff; 
+}
+
+* {
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: 300;
+}
+
+body {
+    background-color: var(--black);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* ------------------------------------------ */
+/* HERO HEADER */
+
+.brick {
+        width: 13%;
+        height: 8%;
+        background-color: var(--dark-sakura);
+        border: 1px solid var(--dark-sakura);
+        border-radius: 5px;
+        position: absolute;
+        transition: opacity 1s ease-in-out;
+        filter: brightness(30%);
+    }
+
+    .light-sakura {
+        background-color: var(--light-sakura);
+        border-color: var(--light-sakura);
+    }
+
+    .header {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        background-size: cover;
+        color: var(--light-sakura);
+        overflow: hidden;
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        max-width: 50%;
+    }
+
+    #heroTitle {
+        font-size: 4vw;
+        font-family: 'Blackoron';
+        font-weight: 700;
+        color: var(--light-sakura);
+        margin-bottom: 20px;
+        text-shadow: var(--dark-sakura) 5px 10px;
+    }
+
+/* ------------------------------------------ */
+.contact-body {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50% auto;
+  margin: 3%;
+  padding: 0 !important;
+  justify-content: space-between;
+  width: 100%;
+  align-self: center !important;
+  justify-self: center !important;
+}
+
+.contactTitle {
+  font-size: 30px;
+  font-family: 'Blackoron';
+  color: var(--dark-sakura);
+  text-shadow: var(--light-sakura) 1px 3px;
+}
+
+.contactTxt {
+  color: var(--white);
+  font-size: 20px;
+}
+
+.info {
+  width: 100%;
+  padding: 0;
+  grid-column: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-input {
+  width: 75%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 3px solid var(--dark-sakura);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 16px;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  width: 75%;
+  font-size: 25px;
+  background-image: linear-gradient(to bottom, var(--dark-sakura) 0%, var(--light-sakura) 100%);
+  border: none;
+  color: var(--white);
+  font-family: 'Blackoron';
+  text-shadow: var(--black) 4px 4px;
+  cursor: pointer;
+}
+
+.form #message {
+  resize: none;
+}
+
+.form-input:focus { 
+    border-color: var(--light-sakura); 
+    box-shadow: 0 0 15px var(--light-sakura); 
+    outline: none; 
+}
+
+/* ------------------------------------------ */
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+  }
+
+  .footerTitle {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: var(--dark-sakura);
+  }
+
+  .footerColumn {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+
+  .footerColumn a,
+  .footertxt {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: 768px) {
+    .footerColumn {
+      flex-basis: 50%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .footerColumn {
+      flex-basis: 33.33%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .footerColumn {
+      flex-basis: 25%;
+    }
+  }

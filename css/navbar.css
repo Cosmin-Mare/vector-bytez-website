@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'Blackoron';
+    src: url('/misc/blackoron/Fonts/blaca___.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+   --light-sakura: #f397bf;
+   --dark-sakura: #9c3245;
+   --black: #000;
+   --white: #fff; 
+}
+
+* {
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: 300;
+}
+
+body {
+    background-color: var(--black);
+}
+/* ------------------------------------------ */
+/* HackClub Decorum */
+
+.hc-link {
+  color: var(--white);
+  text-decoration: underline;
+}
+/* ------------------------------------------ */
+
+.navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    padding: 10px;
+    color: var(--white);
+    position: sticky;
+  }
+
+  .vb-logo {
+    position: relative;
+    width: 14%;
+    padding: 0;
+    margin: 0;
+} 
+
+  .links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  
+  .links li:not(:last-child) {
+    margin-right: 20px;
+  }
+  
+  .links li:first-child {
+    font-weight: 600 !important;
+    color: var(--white);
+  }
+  
+  .links li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .email {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 300;
+  }
+  
+  .nav-link {
+    font-weight: 300;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .logo {
+      margin-bottom: 20px;
+    }
+  
+    .links li:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
